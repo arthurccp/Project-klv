@@ -1,9 +1,4 @@
-//
-//  Persistence.swift
-//  Project-klv
-//
-//  Created by Arthur Silva on 07/02/22.
-//
+
 
 import CoreData
 
@@ -13,10 +8,7 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
+       
         do {
             try viewContext.save()
         } catch {

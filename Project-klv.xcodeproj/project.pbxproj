@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		E3A3A4D427B1E717001A81CF /* Project_klvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4D327B1E717001A81CF /* Project_klvApp.swift */; };
-		E3A3A4D627B1E717001A81CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4D527B1E717001A81CF /* ContentView.swift */; };
 		E3A3A4D827B1E71B001A81CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A3A4D727B1E71B001A81CF /* Assets.xcassets */; };
 		E3A3A4DB27B1E71B001A81CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A3A4DA27B1E71B001A81CF /* Preview Assets.xcassets */; };
 		E3A3A4DD27B1E71B001A81CF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4DC27B1E71B001A81CF /* Persistence.swift */; };
 		E3A3A4E027B1E71B001A81CF /* Project_klv.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4DE27B1E71B001A81CF /* Project_klv.xcdatamodeld */; };
+		E3A3A4E827B1E8D0001A81CF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4E727B1E8D0001A81CF /* DataModel.swift */; };
+		E3A3A4EA27B1E8E7001A81CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4E927B1E8E7001A81CF /* ContentView.swift */; };
+		E3A3A4EC27B1E902001A81CF /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4EB27B1E902001A81CF /* SongListViewModel.swift */; };
+		E3A3A4EE27B1E90B001A81CF /* ArtworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4ED27B1E90B001A81CF /* ArtworkLoader.swift */; };
+		E3A3A4F027B1E913001A81CF /* AddPagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A3A4EF27B1E913001A81CF /* AddPagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E3A3A4D027B1E717001A81CF /* Project-klv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-klv.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A3A4D327B1E717001A81CF /* Project_klvApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_klvApp.swift; sourceTree = "<group>"; };
-		E3A3A4D527B1E717001A81CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3A3A4D727B1E71B001A81CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3A3A4DA27B1E71B001A81CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3A3A4DC27B1E71B001A81CF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E3A3A4DF27B1E71B001A81CF /* Project_klv.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project_klv.xcdatamodel; sourceTree = "<group>"; };
 		E3A3A4E127B1E71B001A81CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A3A4E727B1E8D0001A81CF /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		E3A3A4E927B1E8E7001A81CF /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E3A3A4EB27B1E902001A81CF /* SongListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		E3A3A4ED27B1E90B001A81CF /* ArtworkLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkLoader.swift; sourceTree = "<group>"; };
+		E3A3A4EF27B1E913001A81CF /* AddPagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				E3A3A4D327B1E717001A81CF /* Project_klvApp.swift */,
-				E3A3A4D527B1E717001A81CF /* ContentView.swift */,
+				E3A3A4E927B1E8E7001A81CF /* ContentView.swift */,
+				E3A3A4E727B1E8D0001A81CF /* DataModel.swift */,
+				E3A3A4EB27B1E902001A81CF /* SongListViewModel.swift */,
+				E3A3A4ED27B1E90B001A81CF /* ArtworkLoader.swift */,
+				E3A3A4EF27B1E913001A81CF /* AddPagView.swift */,
 				E3A3A4D727B1E71B001A81CF /* Assets.xcassets */,
 				E3A3A4DC27B1E71B001A81CF /* Persistence.swift */,
 				E3A3A4E127B1E71B001A81CF /* Info.plist */,
@@ -144,10 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A3A4E827B1E8D0001A81CF /* DataModel.swift in Sources */,
+				E3A3A4EA27B1E8E7001A81CF /* ContentView.swift in Sources */,
 				E3A3A4DD27B1E71B001A81CF /* Persistence.swift in Sources */,
-				E3A3A4D627B1E717001A81CF /* ContentView.swift in Sources */,
+				E3A3A4EC27B1E902001A81CF /* SongListViewModel.swift in Sources */,
 				E3A3A4D427B1E717001A81CF /* Project_klvApp.swift in Sources */,
 				E3A3A4E027B1E71B001A81CF /* Project_klv.xcdatamodeld in Sources */,
+				E3A3A4EE27B1E90B001A81CF /* ArtworkLoader.swift in Sources */,
+				E3A3A4F027B1E913001A81CF /* AddPagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
