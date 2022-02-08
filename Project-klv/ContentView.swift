@@ -5,13 +5,7 @@ import CoreData
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
-
-
-    
-    @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Item.entity(), sortDescriptors: []) var items: FetchedResults<Item>
-    @State public var newItemName = ""
-    @State private var selectedItem: Item?
 
 
     @ObservedObject var viewModel: SongListViewModel
@@ -31,9 +25,8 @@ struct ContentView: View {
               SongView(song: song)
                 
                 Button(action: {
-                    let language = Item(context: managedObjectContext)
-                    language.name = song.trackName
-
+                    let music = Item(context: managedObjectContext)
+                    music.name = song.trackName
                 }){
                     Text("Adicionar")                        
                         .foregroundColor(.blue)
@@ -107,13 +100,9 @@ struct EmptyStateView: View {
       .toolbar {
         EditButton()
       }
-    
-        
     }
-    
   }
     
-
   struct SearchBar: UIViewRepresentable {
     typealias UIViewType = UISearchBar
     

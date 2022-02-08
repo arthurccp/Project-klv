@@ -10,37 +10,26 @@ struct PersistenceController {
         if context.hasChanges {
             do {
                 try context.save()
+                print(context)
             } catch {
                 // Show some error here
             }
         }
     }
     
-    // A singleton for our entire app to use
     static let shared = PersistenceController()
 
-    // Storage for Core Data
     let container: NSPersistentContainer
 
-    // A test configuration for SwiftUI previews
     static var preview: PersistenceController = {
-        let controller = PersistenceController(inMemory: true)
-
-        // Create 10 example programming languages.
-        for _ in 0..<10 {
-            let language = Item(context: controller.container.viewContext)
-            language.name = " "
-        }
+    let controller = PersistenceController(inMemory: true)        
 
         return controller
     }()
 
-    // An initializer to load Core Data, optionally able
-    // to use an in-memory store.
     init(inMemory: Bool = false) {
-        // If you didn't name your model Main you'll need
-        // to change this name below.
-        container = NSPersistentContainer(name: "Main")
+
+        container = NSPersistentContainer(name: "Project_klv")
 
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
