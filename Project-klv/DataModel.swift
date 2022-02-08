@@ -19,6 +19,7 @@ class DataModel {
       }
       
     if let songResponse = try? JSONDecoder().decode(SongResponse.self, from: data) {
+        
         completion(songResponse.songs)
       }
     }

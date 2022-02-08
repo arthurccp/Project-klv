@@ -4,6 +4,10 @@ import CoreData
 
 struct ContentView: View {
     
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+
+    
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Item.entity(), sortDescriptors: []) var items: FetchedResults<Item>
     @State public var newItemName = ""
@@ -25,12 +29,10 @@ struct ContentView: View {
  
             List(viewModel.songs) { song in
               SongView(song: song)
-                Button(action:{
-
-                   print("você selecionou \(song.trackName)")
-                    
-                    self.newItemName = song.trackName
-                    print("salvei \(newItemName)")
+                
+                Button(action: {
+                    let language = Item(context: managedObjectContext)
+                    language.name = song.trackName
 
                 }){
                     Text("Adicionar")                        
@@ -47,71 +49,7 @@ struct ContentView: View {
       
       }
     }
-
-        func save(it: Item?) {
-            if self.selectedItem == nil {
-                let newItem = Item(context: self.context)
-                newItem.name = newItemName
-                try? self.context.save()
-            } else {
-                context.performAndWait {
-                    it!.name = self.newItemName
-                    try? context.save()
-                    self.newItemName = ""
-                    self.selectedItem = nil
-                }
-            }
-        }
     
-    struct AddPagView: View {
-         
-        @Environment(\.presentationMode) var presentation
-        
-        var body: some View {
-            
-            NavigationView{
-                List{
-                    Section(header: Text("Title")){
-                       
-                    }
-                    
-                    Section(header: Text("Detail")){
-                       
-                    }
-                }
-                .listStyle(GroupedListStyle())
-                .navigationTitle("Update")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar{
-                
-                ToolbarItem(placement: .navigationBarTrailing){
-                    
-                    Button(action:{
-                        print("você selecionou")
-                        
-                        
-                    }){
-                        Text("DONE")
-                            .foregroundColor(.blue)
-                            .font(.body)
-
-                    }
-                        
-                }
-                ToolbarItem(placement: .navigationBarLeading){
-                    
-                    Button(action:{presentation.wrappedValue.dismiss()}, label: {
-                        Text("Cancel")
-                    })
-                        
-                }
-            }
-              
-            }
-        }
-    }
-
-
     
   struct SongView: View {
     @ObservedObject var song: SongViewModel
