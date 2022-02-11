@@ -27,6 +27,7 @@ struct ContentView: View {
                 Button(action: {
                     let music = Item(context: managedObjectContext)
                     music.name = song.trackName
+                    print("\(music.name!)        Salvo com sucesso")
                 }){
                     Text("Adicionar")                        
                         .foregroundColor(.blue)
@@ -109,7 +110,7 @@ struct EmptyStateView: View {
     @Binding var searchTerm: String
 
     func makeUIView(context: Context) -> UISearchBar {
-      let searchBar = UISearchBar(frame: .zero)
+        let searchBar = UISearchBar(frame: .infinite)
       searchBar.delegate = context.coordinator
       searchBar.searchBarStyle = .minimal
       searchBar.placeholder = "Type a song, artist, or album name..."
